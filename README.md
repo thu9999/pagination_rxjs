@@ -27,3 +27,8 @@ Như vậy, mỗi khi phụ thuộc thay đổi thì ta lại lặp lại đoạ
 SOLUTION:
 Có thể kết hợp rxjs trong việc quản lý pagination. Mỗi phụ thuộc là 1 observable (stream of value). Mỗi khi observable này emit 1 value (page change, items per page change ...)
 thì subscription sẽ thực hiện việc gọi api để lấy danh sách mới. Subscription sẽ quản lý việc gọi api và ta cũng không cần nhớ hay gọi api này mỗi khi có 1 phụ thuộc thay đổi.
+
+- Đồng thời ta cũng quản lý được việc gọi api mỗi khi giá trị phụ thuộc thay đổi.
+Chỉ gọi api khi: 
++ Người dùng ngừng nhập ô tìm kiếm trong 1 khoảng thời gian (500ms trong example)
++ Hai giá trị tìm kiếm liên tiếp khác nhau
