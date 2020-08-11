@@ -1,0 +1,47 @@
+@import './../scss//common.scss';
+$pageSize: 24px;
+
+button {
+    padding: 8px 12px;
+}
+
+.open-modal-button {
+    background-color: lightblue;
+}
+
+.row {
+    margin-bottom: 12px;
+}
+
+ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    li {
+        list-style-type: none;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: $pageSize;
+        height: $pageSize;
+
+        background-color: #ddd;
+        
+        border-radius: 2px;
+        margin: 2px;
+
+        cursor: pointer;
+
+        transition: .3s;
+    }
+
+    li.active {
+        background-color: lightblue;
+    }
+}
+
+
+
